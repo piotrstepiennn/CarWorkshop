@@ -13,7 +13,7 @@ namespace CarWorkshop.Domain.Entities
         public string? Description { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow; 
         public CarWorkshopContactDetails ContactDetails { get; set; } = default!;
-        private string EncodedName { get; set; } = default!;
+        public string EncodedName { get; set; } = default!;
         public string? About {  get; set; }
 
         public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
