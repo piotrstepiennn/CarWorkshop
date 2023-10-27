@@ -20,6 +20,8 @@ namespace CarWorkshop.Domain.Entities
         public string? CreatedByID { get; set; }
         public IdentityUser? CreatedBy { get; set; }
 
+        public List<CarWorkshopService> Services { get; set; } = new();
+
         public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
     }
 }

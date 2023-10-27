@@ -24,12 +24,14 @@ namespace CarWorkshop.Infrastructure.Extensions
             services.AddScoped<CarWorkshopSeeder>();
 
             services.AddScoped<ICarWorkshopRepository, CarWorkshopRepository>();
+            services.AddScoped<ICarWorkshopServiceRepository, CarWorkshopServiceRepository>();
 
             services.AddDefaultIdentity<IdentityUser>(options => {
                 options.Stores.MaxLengthForKeys = 450;
             })
            .AddRoles<IdentityRole>()
            .AddEntityFrameworkStores<CarWorkshopDbContext>();
+
         }
     }
 }
